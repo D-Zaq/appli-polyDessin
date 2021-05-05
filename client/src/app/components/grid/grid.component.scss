@@ -1,0 +1,35 @@
+.mat-slide-toggle {
+    margin-left: 0.5em;
+}
+::ng-deep .mat-slide-toggle-thumb {
+    background-size: contain;
+}
+
+::ng-deep.mat-accent .mat-slide-toggle-thumb {
+    background-image: url(https://cdn3.iconfinder.com/data/icons/basicolor-arrows-checks/24/151_check_no_delete_error_remove-512.png) !important;
+    filter: saturate(100%);
+}
+
+::ng-deep.mat-checked .mat-slide-toggle-thumb {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/web-interface-part-2/32/circle-checkmark-512.png) !important;
+    filter: saturate(100%);
+}
+
+h3 {
+    margin-left: 2em;
+    font-weight: bold;
+}
+h4 {
+    margin-left: 0.5em;
+    margin-top: 0.7em;
+    font-weight: initial;
+    color: rgb(233, 233, 233);
+}
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
+label {
+    margin-left: 0.5em;
+}

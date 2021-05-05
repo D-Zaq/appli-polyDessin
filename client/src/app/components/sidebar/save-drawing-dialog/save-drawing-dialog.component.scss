@@ -1,0 +1,51 @@
+.example-chip-list {
+    width: 90%;
+}
+
+#imageCanvas {
+    margin-right: 0.5em;
+    margin-right: 0.5em;
+    float: right;
+}
+
+#lefItems {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+
+#layout {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+.buttons {
+    margin-right: 0.2em;
+}
+
+.validTag {
+    color: green;
+}
+
+.invalidTag {
+    color: orange;
+}
+
+::ng-deep .green-snackbar {
+    color: white;
+    background: #15ad07;
+}
+
+::ng-deep .red-snackbar {
+    color: white;
+    background: #ad1308;
+}
+
+.mat-form-field {
+    margin-bottom: 7em;
+}

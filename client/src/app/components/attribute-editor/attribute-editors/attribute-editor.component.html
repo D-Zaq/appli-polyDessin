@@ -1,0 +1,194 @@
+<div class="container">
+    <div *ngIf="this.isThicknessValueNeeded">
+        <mat-label>Épaisseur du trait </mat-label>
+        <div class="slider">
+            <mat-slider
+                thumbLabel
+                (change)="sliderHandler('thicknessValue', this.$event.value)"
+                step="1"
+                tickInterval="1"
+                [min]="this.min"
+                max="10"
+                [value]="this.thicknessValue"
+            ></mat-slider>
+            <h4>{{ this.thicknessValue }}</h4>
+        </div>
+    </div>
+
+    <div *ngIf="this.isDropletSizeNeeded">
+        <mat-label>Épaisseur des gouttes</mat-label>
+        <div class="slider">
+            <mat-slider
+                thumbLabel
+                (change)="sliderHandler('dropletSizeValue', this.$event.value)"
+                step="1"
+                tickInterval="1"
+                [min]="1"
+                max="10"
+                [value]="this.dropletSize"
+            ></mat-slider>
+            <h4>{{ this.dropletSize }}</h4>
+        </div>
+    </div>
+    <div *ngIf="this.isDiameterNeeded">
+        <mat-label>Diamètre de l'outil</mat-label>
+        <div class="slider">
+            <mat-slider
+                thumbLabel
+                (change)="sliderHandler('diameterValue', this.$event.value)"
+                step="10"
+                tickInterval="10"
+                [min]="15"
+                max="250"
+                [value]="this.diameterValue"
+            ></mat-slider>
+            <h4>{{ this.diameterValue }}</h4>
+        </div>
+    </div>
+    <div *ngIf="this.isFrequencyNeeded">
+        <mat-label>Fréquence de l'outil</mat-label>
+        <div class="slider">
+            <mat-slider
+                thumbLabel
+                (change)="sliderHandler('frequencyValue', this.$event.value)"
+                step="1"
+                tickInterval="2"
+                [min]="1"
+                max="500"
+                [value]="this.frequencyValue"
+            ></mat-slider>
+            <h4>{{ this.frequencyValue }}</h4>
+        </div>
+    </div>
+
+    <div *ngIf="this.isNbSidesNeeded">
+        <mat-label>Nombre de cote du polygone</mat-label>
+        <div class="slider">
+            <mat-slider
+                thumbLabel
+                (change)="sliderHandler('nbPolygonSides', this.$event.value)"
+                step="1"
+                tickInterval="2"
+                [min]="3"
+                max="12"
+                [value]="this.nbPolygonSides"
+            ></mat-slider>
+            <h4>{{ this.nbPolygonSides }}</h4>
+        </div>
+    </div>
+
+    <div *ngIf="this.isStampEnabled">
+        <mat-label>Angle d'orientation</mat-label>
+        <div class="slider">
+            <mat-slider
+                thumbLabel
+                (change)="sliderHandler('stampAngle', this.$event.value)"
+                step="1"
+                tickInterval="60"
+                [min]="-359"
+                max="359"
+                [value]="this.stampAngle"
+            ></mat-slider>
+            <h4>{{ this.stampAngle }}</h4>
+        </div>
+        <mat-label>Facteur de mise a l'echelle</mat-label>
+        <div class="slider">
+            <mat-slider
+                thumbLabel
+                (change)="sliderHandler('stampScale', this.$event.value)"
+                step="0.1"
+                tickInterval="2"
+                [min]="0.1"
+                max="2"
+                [value]="this.stampScale"
+            ></mat-slider>
+            <h4>{{ this.stampScale }}</h4>
+        </div>
+        <div class="img-container">
+            <img id="like" class="stamp-icon" src="'../../../../../../assets/stamp/like.png" (click)="stampSelectHandler('like')" />
+            <img id="idea" class="stamp-icon" src="'../../../../../../assets/stamp/idea.png" (click)="stampSelectHandler('idea')" />
+            <img id="location" class="stamp-icon" src="'../../../../../../assets/stamp/location.png" (click)="stampSelectHandler('location')" />
+            <img id="search" class="stamp-icon" src="'../../../../../../assets/stamp/search.png" (click)="stampSelectHandler('search')" />
+            <img id="star" class="stamp-icon" src="'../../../../../../assets/stamp/star.png" (click)="stampSelectHandler('star')" />
+            <img id="user" class="stamp-icon" src="'../../../../../../assets/stamp/user.png" (click)="stampSelectHandler('user')" />
+            <img id="music" class="stamp-icon" src="'../../../../../../assets/stamp/music.png" (click)="stampSelectHandler('music')" />
+            <img id="error" class="stamp-icon" src="'../../../../../../assets/stamp/error.png" (click)="stampSelectHandler('error')" />
+            <img id="share" class="stamp-icon" src="'../../../../../../assets/stamp/share.png" (click)="stampSelectHandler('share')" />
+        </div>
+    </div>
+
+    <div *ngIf="this.isTextNeeded">
+        <mat-label>Taille de police</mat-label>
+        <div class="slider">
+            <mat-slider thumbLabel [(ngModel)]="textSize" step="1" tickInterval="2" [min]="5" max="50" [value]="this.textSize"></mat-slider>
+            <h4>{{ this.textSize }}</h4>
+        </div>
+        <section class="example-section">
+            <mat-checkbox value="isBold" [(ngModel)]="isBold">Gras</mat-checkbox>
+        </section>
+        <section class="example-section">
+            <mat-checkbox value="isItalic" [(ngModel)]="isItalic">Itallique</mat-checkbox>
+        </section>
+        <mat-form-field appearance="fill">
+            <mat-select [(value)]="selectedFont">
+                <mat-option value="Times New Roman"> Times New Roman</mat-option>
+                <mat-option value="Helvetica"> Helvetica</mat-option>
+                <mat-option value="Arial"> Arial</mat-option>
+                <mat-option value="Sans-serif"> Sans-serif</mat-option>
+                <mat-option value="Calibri"> Calibri</mat-option>
+            </mat-select></mat-form-field
+        >
+        <mat-form-field appearance="fill">
+            <mat-select [(value)]="textAlignment">
+                <mat-option value="left"> Alignement: Gauche</mat-option>
+                <mat-option value="center"> Alignement: Centre</mat-option>
+                <mat-option value="right"> Alignement: Droite</mat-option>
+            </mat-select></mat-form-field
+        >
+    </div>
+    <div class="selectionButtons">
+        <button mat-raised-button *ngIf="this.isSelectionButtonsNeeded" (click)="applyClipboardAction('Delete')">Supprimer</button>
+
+        <button mat-raised-button *ngIf="this.isSelectionButtonsNeeded" (click)="applyClipboardAction('Cut')">Couper</button>
+
+        <button mat-raised-button *ngIf="this.isSelectionButtonsNeeded" (click)="applyClipboardAction('Copy')">Copier</button>
+
+        <button mat-raised-button *ngIf="this.isSelectionButtonsNeeded" (click)="applyClipboardAction('Paste')">Coller</button>
+
+        <button mat-raised-button *ngIf="this.isSelectionButtonsNeeded" (click)="selectAllPixels()">Tout sélectionner</button>
+    </div>
+
+    <div *ngIf="this.isToleranceNeeded">
+        <mat-label>Tolérance (%)</mat-label>
+        <div class="slider">
+            <mat-slider
+                thumbLabel
+                (change)="sliderHandler('tolerance', this.$event.value)"
+                step="1"
+                tickInterval="1"
+                [min]="1"
+                max="100"
+                [value]="this.tolerance"
+            ></mat-slider>
+            <h4>{{ this.tolerance }}</h4>
+        </div>
+    </div>
+
+    <div *ngIf="this.isRadioNeeded">
+        <mat-label>Type de remplissage</mat-label>
+        <mat-radio-group aria-label="Select an option" (change)="radioHandler(this.$event.value)">
+            <mat-radio-button value="1" [disabled]="!this.isRadioNeeded" [checked]="this.isFill">Remplir</mat-radio-button>
+            <mat-radio-button value="2" [disabled]="!this.isRadioNeeded" [checked]="this.isOutline">Contour</mat-radio-button>
+            <mat-radio-button value="3" [disabled]="!this.isRadioNeeded" [checked]="this.isBoth">Les Deux</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div class="button-row" *ngIf="this.isApplyNeeded">
+        <button mat-flat-button id="apply" (click)="applyHandler()">Appliquer</button>
+        <button mat-stroked-button id="cancel" (click)="cancelHandler()">Annuler</button>
+    </div>
+
+    <div class="zoomCanvas" *ngIf="this.isZoomCanvasNeeded">
+        <app-zoom-canvas></app-zoom-canvas>
+    </div>
+</div>

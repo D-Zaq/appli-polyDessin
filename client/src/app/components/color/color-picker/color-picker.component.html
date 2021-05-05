@@ -1,0 +1,13 @@
+<div class="color-picker-container">
+    <div class="colors">
+        <div class="selected-color">
+            <input ejs-colorpicker id="firstcolorpicker" required [(value)]="primaryColor" [modeSwitcher]="false" (change)="onChange()" />
+        </div>
+        <div class="unselected-color">
+            <input ejs-colorpicker id="secondcolorpicker" required [(value)]="secondaryColor" [modeSwitcher]="false" (change)="onChange()" />
+        </div>
+    </div>
+    <button (click)="onClick()" mat-raised-button>Inverser couleurs</button>
+
+    <app-color-history> </app-color-history>
+</div>

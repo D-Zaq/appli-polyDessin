@@ -1,0 +1,60 @@
+<div id="layout">
+    <div id="Tags">
+        <div>
+            <mat-form-field class="example-chip-list">
+                <mat-label>Recherche par étiquette</mat-label>
+                <mat-chip-list #chipList aria-label="Tag selection">
+                    <mat-chip *ngFor="let tag of drawingTags" [removable]="removable" (removed)="deleteTag(tag)">
+                        {{ tag }}
+                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input
+                        placeholder="Nouveau tag..."
+                        [matChipInputFor]="chipList"
+                        [formControl]="drawingTagsForm"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="addOnBlur"
+                        (matChipInputTokenEnd)="addTag($event)"
+                        #input
+                        maxlength="15"
+                    />
+                    <mat-icon class="validTag" *ngIf="!drawingTagsForm.invalid">check_circle</mat-icon>
+                    <mat-icon class="invalidTag" *ngIf="drawingTagsForm.invalid && drawingTagsForm.value.length !== 0">highlight_off</mat-icon>
+                </mat-chip-list>
+                <mat-hint align="end">{{ input.value?.length || 0 }}/15</mat-hint>
+                <mat-hint align="start"
+                    >_Un tag doit contenir juste des lettres francaise et des chiffres sans espaces et sans séparateurs<br />
+                    _Pour confirmer le tag appuyez sur ENTRER, ESPACE ou TAB</mat-hint
+                >
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="noDrawing" *ngIf="this.drawings.length === 0">
+        <h1>Il n'y a pas de dessin sauvegardé</h1>
+    </div>
+    <div
+        class="noDrawingTags"
+        *ngIf="this.drawings.length !== 0 && this.drawingsContainingTags.length === 0"
+        [hidden]="this.drawingTags.length === 0"
+    >
+        <h1>Il n'y a aucun dessin avec ces tags</h1>
+    </div>
+    <div id="imageSlider" [hidden]="this.drawings.length === 0">
+        <ng-image-slider
+            #carouselImagesSlider
+            [images]="this.carouselImages"
+            [imagePopup]="false"
+            [paginationShow]="false"
+            [infinite]="this.drawings.length > 1"
+            [imageSize]="imageSize"
+            (imageClick)="openDrawing($event)"
+        >
+        </ng-image-slider>
+    </div>
+    <div id="button">
+        <button mat-raised-button (click)="deleteDrawing()" [disabled]="this.drawings.length === 0">Supprimer</button>
+        <div class="spinner" *ngIf="this.isGettingImages">
+            <mat-spinner [diameter]="30"></mat-spinner>
+        </div>
+    </div>
+</div>

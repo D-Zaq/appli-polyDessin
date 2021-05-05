@@ -1,0 +1,26 @@
+<hr />
+<div>
+    <h3>Propriété de la grille</h3>
+    <mat-slide-toggle [checked]="drawingService.isGrid" (change)="drawGrid()">Afficher grille</mat-slide-toggle>
+</div>
+<p></p>
+<label>Fixez la taille des carrés: </label>
+<div class="slider">
+    <mat-slider thumbLabel tickInterval="5" step="5" min="5" max="100" (change)="setGridSize($event)" [value]="this.drawingService.gridSquareSize">
+    </mat-slider>
+    <h4>{{ this.drawingService.gridSquareSize }}</h4>
+</div>
+<label>Fixez l'opacite des lignes: </label>
+<div class="slider">
+    <mat-slider
+        thumbLabel
+        tickInterval="5"
+        step="5"
+        min="10"
+        max="100"
+        (change)="setGridOpacity($event)"
+        [value]="this.drawingService.gridLinesOpacity"
+    >
+    </mat-slider>
+    <h4>{{ this.drawingService.gridLinesOpacity }}</h4>
+</div>

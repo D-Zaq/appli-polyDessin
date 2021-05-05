@@ -1,0 +1,21 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.drawing-container {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(135deg, hsla(55, 0%, 44%, 0.09) 0px, hsla(55, 0%, 44%, 0.09) 1px, transparent 1px, transparent 11px),
+        repeating-linear-gradient(45deg, hsla(55, 0%, 44%, 0.09) 0px, hsla(55, 0%, 44%, 0.09) 1px, transparent 1px, transparent 11px),
+        linear-gradient(90deg, hsl(22, 0%, 8%), hsl(22, 0%, 8%));
+}
+
+.drawing {
+    display: grid;
+    width: min-content;
+    outline: none;
+}

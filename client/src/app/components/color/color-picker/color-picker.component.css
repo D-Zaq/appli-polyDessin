@@ -1,0 +1,36 @@
+.color-picker-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 10px;
+    align-content: flex-start;
+    height: auto;
+    width: 170px;
+    font-size: 15px;
+}
+
+.color-picker {
+    padding: 10px;
+}
+
+.selected-color {
+    border: solid black 3px;
+}
+
+.unselected-color {
+    border: solid 3px #cdcdcd;
+}
+
+.colors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 10px;
+    gap: 10px;
+    align-content: flex-start;
+    height: auto;
+    width: 170px;
+    font-size: 15px;
+}

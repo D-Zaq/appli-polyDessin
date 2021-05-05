@@ -1,0 +1,361 @@
+<div class="container">
+    <div class="buttons-container">
+        <div class="tools-container">
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(0); else notSelected0">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(0))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(0).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(0).tooltip + ' ' + toolSelectorService.getToolButtons(0).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected0>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(0))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(0).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(0).tooltip + ' ' + toolSelectorService.getToolButtons(0).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(1); else notSelected1">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(1))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(1).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(1).tooltip + ' ' + toolSelectorService.getToolButtons(1).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected1>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(1))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(1).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(1).tooltip + ' ' + toolSelectorService.getToolButtons(1).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(2); else notSelected2">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(2))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(2).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(2).tooltip + ' ' + toolSelectorService.getToolButtons(0).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected2>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(2))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(2).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(2).tooltip + ' ' + toolSelectorService.getToolButtons(2).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(3); else notSelected3">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(3))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(3).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(3).tooltip + ' ' + toolSelectorService.getToolButtons(0).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected3>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(3))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(3).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(3).tooltip + ' ' + toolSelectorService.getToolButtons(3).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(5); else notSelected5">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(5))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(5).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(5).tooltip + ' ' + toolSelectorService.getToolButtons(5).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected5>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(5))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(5).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(5).tooltip + ' ' + toolSelectorService.getToolButtons(5).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(8); else notSelected8">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(8))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(8).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(8).tooltip + ' ' + toolSelectorService.getToolButtons(8).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected8>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(8))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(8).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(8).tooltip + ' ' + toolSelectorService.getToolButtons(8).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(10); else notSelected10">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(10))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(10).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(10).tooltip + ' ' + toolSelectorService.getToolButtons(10).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected10>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(10))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(10).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(10).tooltip + ' ' + toolSelectorService.getToolButtons(10).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(4); else notSelected4">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(4))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(4).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(4).tooltip + ' ' + toolSelectorService.getToolButtons(4).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected4>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(4))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(4).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(4).tooltip + ' ' + toolSelectorService.getToolButtons(4).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(6); else notSelected6">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(6))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(6).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(6).tooltip + ' ' + toolSelectorService.getToolButtons(6).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected6>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(6))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(6).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(6).tooltip + ' ' + toolSelectorService.getToolButtons(6).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(9); else notSelected9">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(9))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(9).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(9).tooltip + ' ' + toolSelectorService.getToolButtons(9).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected9>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(9))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(9).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(9).tooltip + ' ' + toolSelectorService.getToolButtons(9).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(7); else notSelected7">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(7))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(7).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(7).tooltip + ' ' + toolSelectorService.getToolButtons(7).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected7>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(7))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(7).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(7).tooltip + ' ' + toolSelectorService.getToolButtons(7).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(11); else notSelected11">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(11))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + 'Rectangle de selection' + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(11).tooltip + ' ' + toolSelectorService.getToolButtons(11).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected11>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(11))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(11).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(11).tooltip + ' ' + toolSelectorService.getToolButtons(11).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(12); else notSelected12">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(12))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(12).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(12).tooltip + ' ' + toolSelectorService.getToolButtons(12).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected12>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(12))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(12).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(12).tooltip + ' ' + toolSelectorService.getToolButtons(12).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+            <div *ngIf="currentTool == toolSelectorService.getToolButtons(13); else notSelected13">
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(13))">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(13).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(13).tooltip + ' ' + toolSelectorService.getToolButtons(13).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected13>
+                <a role="button" (click)="selectCurrentTool(toolSelectorService.getToolButtons(13))">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(13).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(13).tooltip + ' ' + toolSelectorService.getToolButtons(13).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+        </div>
+        <div class="tools-container top-border">
+            <div *ngIf="magnetismService.isMagnetismToggled; else notSelected27">
+                <a role="button" (click)="magnetismService.isMagnetismToggled = false">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(27).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(27).tooltip + ' ' + toolSelectorService.getToolButtons(27).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected27>
+                <a role="button" (click)="magnetismService.isMagnetismToggled = true">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(27).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(27).tooltip + ' ' + toolSelectorService.getToolButtons(27).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+            <div *ngIf="gridToggled; else notSelected26">
+                <a role="button" (click)="gridToggled = false">
+                    <img
+                        class="icon selected"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(26).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(26).tooltip + ' ' + toolSelectorService.getToolButtons(26).shortcut }}"
+                    />
+                </a>
+            </div>
+            <ng-template #notSelected26>
+                <a role="button" (click)="gridToggled = true">
+                    <img
+                        class="icon"
+                        src="{{ '../../../assets/' + toolSelectorService.getToolButtons(26).tooltip + '.png' }}"
+                        title="{{ toolSelectorService.getToolButtons(26).tooltip + ' ' + toolSelectorService.getToolButtons(26).shortcut }}"
+                    />
+                </a>
+            </ng-template>
+        </div>
+        <div class="tools-container top-border">
+            <a role="button" (click)="undoAction()">
+                <img
+                    class="icon"
+                    src="{{ '../../../assets/' + toolSelectorService.getToolButtons(20).tooltip + '.png' }}"
+                    title="{{ toolSelectorService.getToolButtons(20).tooltip + ' ' + toolSelectorService.getToolButtons(20).shortcut }}"
+                />
+            </a>
+            <a role="button" (click)="redoAction()">
+                <img
+                    class="icon"
+                    src="{{ '../../../assets/' + toolSelectorService.getToolButtons(21).tooltip + '.png' }}"
+                    title="{{ toolSelectorService.getToolButtons(21).tooltip + ' ' + toolSelectorService.getToolButtons(21).shortcut }}"
+                />
+            </a>
+            <a role="button" (click)="createNewDrawing(windowInnerWidth, windowInnerHeight)">
+                <img
+                    class="icon"
+                    src="{{ '../../../assets/' + toolSelectorService.getToolButtons(16).tooltip + '.png' }}"
+                    title="{{ toolSelectorService.getToolButtons(16).tooltip + ' ' + toolSelectorService.getToolButtons(16).shortcut }}"
+                />
+            </a>
+            <a role="button" (click)="openExportDrawingDialog()">
+                <img
+                    class="icon"
+                    src="{{ '../../../assets/' + toolSelectorService.getToolButtons(19).tooltip + '.png' }}"
+                    title="{{ toolSelectorService.getToolButtons(19).tooltip + ' ' + toolSelectorService.getToolButtons(19).shortcut }}"
+                />
+            </a>
+            <a role="button" (click)="openSaveDrawingDialog()">
+                <img
+                    class="icon"
+                    src="{{ '../../../assets/' + toolSelectorService.getToolButtons(17).tooltip + '.png' }}"
+                    title="{{ toolSelectorService.getToolButtons(17).tooltip + ' ' + toolSelectorService.getToolButtons(17).shortcut }}"
+                />
+            </a>
+            <a role="button" (click)="openDrawingsCarouselDialog()">
+                <img
+                    class="icon"
+                    src="{{ '../../../assets/' + toolSelectorService.getToolButtons(18).tooltip + '.png' }}"
+                    title="{{ toolSelectorService.getToolButtons(18).tooltip + ' ' + toolSelectorService.getToolButtons(18).shortcut }}"
+                />
+            </a>
+            <a role="button" routerLink="/">
+                <img class="icon" src="{{ '../../../assets/' + 'home.png' }}" title="Page acceuil" />
+            </a>
+        </div>
+    </div>
+    <div class="attributes-container">
+        <div>
+            <app-color-picker> </app-color-picker>
+        </div>
+        <div class="colors-container">
+            <app-attribute-editor></app-attribute-editor>
+            <app-grid-option *ngIf="gridToggled === true"></app-grid-option>
+            <app-magnetism-option *ngIf="magnetismService.isMagnetismToggled === true"></app-magnetism-option>
+        </div>
+    </div>
+</div>

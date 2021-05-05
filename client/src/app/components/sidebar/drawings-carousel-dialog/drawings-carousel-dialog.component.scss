@@ -1,0 +1,60 @@
+.example-chip-list {
+    width: 500%;
+}
+.mat-label {
+    font-size: 2em;
+}
+#Tags {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.2em;
+}
+
+#layout {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+.buttons {
+    margin-right: 0.2em;
+}
+
+#imageSlider {
+    margin-top: 50px;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+}
+
+.validTag {
+    color: green;
+}
+
+.invalidTag {
+    color: orange;
+}
+
+::ng-deep .green-snackbar {
+    color: white;
+    background: #15ad07;
+}
+
+::ng-deep .red-snackbar {
+    color: white;
+    background: #ad1308;
+}
+
+.spinner {
+    margin-left: 0.5em;
+}
+
+.mat-form-field {
+    margin-bottom: 1em;
+}

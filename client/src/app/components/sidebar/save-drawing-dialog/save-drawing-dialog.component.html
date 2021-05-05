@@ -1,0 +1,60 @@
+<div id="layout">
+    <div id="leftItems">
+        <div>
+            <form>
+                <mat-form-field>
+                    <mat-label>Entrez le titre de l'image </mat-label>
+                    <input matInput name="imageTitle" [formControl]="imageTitleForm" #input maxlength="15" />
+                    <mat-hint align="end">{{ input.value?.length || 0 }}/15</mat-hint>
+                    <mat-hint align="start"
+                        >_Un titre doit contenir juste des lettres francaise et des chiffres sans espaces et sans séparateurs.<br />
+                        _Pour pouvoir confirmer la sauvegarde, le titre ne doit pas être vide ou invalide.</mat-hint
+                    >
+                </mat-form-field>
+            </form>
+        </div>
+        <div>
+            <mat-form-field class="example-chip-list">
+                <mat-label>Ajouter une étiquette</mat-label>
+                <mat-chip-list #chipList aria-label="Tag selection">
+                    <mat-chip *ngFor="let tag of drawingTags" [removable]="removable" (removed)="deleteTag(tag)">
+                        {{ tag }}
+                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input
+                        placeholder="Nouveau tag..."
+                        [matChipInputFor]="chipList"
+                        [formControl]="drawingTagsForm"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="addOnBlur"
+                        (matChipInputTokenEnd)="addTag($event)"
+                        #input
+                        maxlength="15"
+                    />
+                    <mat-icon class="validTag" *ngIf="!drawingTagsForm.invalid">check_circle</mat-icon>
+                    <mat-icon class="invalidTag" *ngIf="drawingTagsForm.invalid && drawingTagsForm.value.length !== 0">error</mat-icon>
+                </mat-chip-list>
+                <mat-hint align="end">{{ input.value?.length || 0 }}/15</mat-hint>
+                <mat-hint align="start"
+                    >_Un tag doit contenir juste des lettres francaise et des chiffres sans espaces et sans séparateurs.<br />
+                    _Pour confirmer le tag appuyez sur ENTRER, ESPACE ou TAB.</mat-hint
+                >
+            </mat-form-field>
+        </div>
+        <div>
+            <button
+                class="buttons"
+                mat-raised-button
+                (click)="saveImage()"
+                [disabled]="imageTitleForm.value.length === 0 || imageTitleForm.invalid || this.isBeingSaved"
+            >
+                sauvegarder
+            </button>
+            <button class="buttons" mat-raised-button mat-dialog-close>Annuler</button>
+        </div>
+    </div>
+
+    <div>
+        <canvas id="imageCanvas" #imageCanvas width="250" height="250"></canvas>
+    </div>
+</div>

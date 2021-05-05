@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Créer un nouveau dessin</h2>
+<mat-dialog-content class="mat-typography">
+    <p>Un dessin présent non-vide est sur la zone de travail, êtes-vous sûr de vouloir abandonner vos changements ?</p>
+</mat-dialog-content>
+<mat-dialog-actions align="start">
+    <button mat-button [mat-dialog-close]="true" mat-dialog-close>Annuler</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="clearCanvas(windowInnerWidth, windowInnerHeight)">Confirmer</button>
+</mat-dialog-actions>

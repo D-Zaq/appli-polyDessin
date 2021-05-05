@@ -1,0 +1,92 @@
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.radio-button {
+    margin: 5px;
+}
+
+#layout {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+#imageCanvas {
+    margin-right: 0.5em;
+    margin-left: 1em;
+    float: right;
+}
+
+#lefItems {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+.buttons {
+    margin-right: 0.2em;
+}
+
+#export-button {
+    background-image: linear-gradient(
+        45deg,
+        rgb(2, 6, 1) 0%,
+        rgb(2, 6, 1) 14.286%,
+        rgb(8, 29, 31) 14.286%,
+        rgb(8, 29, 31) 28.572%,
+        rgb(13, 52, 61) 28.572%,
+        rgb(13, 52, 61) 42.858%,
+        rgb(19, 75, 92) 42.858%,
+        rgb(19, 75, 92) 57.144%,
+        rgb(25, 98, 122) 57.144%,
+        rgb(25, 98, 122) 71.43%,
+        rgb(30, 121, 152) 71.43%,
+        rgb(30, 121, 152) 85.716%,
+        rgb(36, 144, 182) 85.716%,
+        rgb(36, 144, 182) 100.002%
+    );
+}
+
+.imgur-button {
+    background-image: linear-gradient(
+        45deg,
+        rgb(2, 6, 1) 0%,
+        rgb(2, 6, 1) 14.286%,
+        rgb(8, 29, 31) 14.286%,
+        rgb(8, 29, 31) 28.572%,
+        rgb(13, 52, 61) 28.572%,
+        rgb(13, 52, 61) 42.858%,
+        rgb(19, 75, 92) 42.858%,
+        rgb(19, 75, 92) 57.144%,
+        rgb(25, 98, 122) 57.144%,
+        rgb(25, 98, 122) 71.43%,
+        rgb(30, 121, 152) 71.43%,
+        rgb(30, 121, 152) 85.716%,
+        rgb(36, 144, 182) 85.716%,
+        rgb(36, 144, 182) 100.002%
+    );
+}
+
+.imgur-button-link:link {
+    background-color: none;
+    color: rgb(255, 254, 254);
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.imgur-button-link:hover {
+    background-color: rgb(19, 151, 90);
+}
+
+.imgur-button-link:visited {
+    background-color: rgb(243, 205, 162);
+}

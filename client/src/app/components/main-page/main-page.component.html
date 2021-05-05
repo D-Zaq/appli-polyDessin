@@ -1,0 +1,28 @@
+<div class="container">
+    <mat-toolbar class="toolbar">
+        <h1 class="header-item">Bienvenue dans l'application {{ title }}</h1>
+    </mat-toolbar>
+
+    <mat-progress-bar mode="buffer" color="primary"></mat-progress-bar>
+
+    <mat-card>
+        <div class="buttons-layout">
+            <button class="button" mat-stroked-button (click)="createNewDrawing(windowInnerWidth, windowInnerHeight)" routerLink="/editor">
+                <mat-icon>brush</mat-icon> Créer un nouveau dessin
+            </button>
+            <button class="button" mat-stroked-button (click)="openDrawingsCarouselDialog()" routerLink="/editor">
+                <mat-icon>collections_bookmark</mat-icon> Ouvrir le carrousel de dessins
+            </button>
+            <button class="button" mat-stroked-button (click)="continueDrawing()" [disabled]="!isContinueDrawingPossible()" routerLink="/editor">
+                <mat-icon>last_page</mat-icon> Continuer un dessin
+            </button>
+        </div>
+    </mat-card>
+
+    <mat-progress-bar mode="buffer" color="primary"></mat-progress-bar>
+
+    <div class="footer-item">
+        <h4 class="team-name">Équipe Poly</h4>
+        <p>Jérémy Thai, Jonathan Gao, Zakaria Diabi, Lucas Dameron-Monfrais, Yannick Bonou, Mounib Djellab</p>
+    </div>
+</div>

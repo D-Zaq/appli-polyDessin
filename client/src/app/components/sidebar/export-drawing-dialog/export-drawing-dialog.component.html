@@ -1,0 +1,49 @@
+<div id="layout">
+    <div id="leftItems">
+        <div>
+            <h3>Choisissez un format :</h3>
+            <mat-radio-group aria-labelledby="format-group" class="radio-group" [(ngModel)]="imageFormat">
+                <mat-radio-button class="radio-button" value="png">PNG</mat-radio-button>
+                <mat-radio-button class="radio-button" value="jpeg">JPG</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div>
+            <h3>choisissez un filtre :</h3>
+            <mat-radio-group aria-labelledby="filter-group" class="radio-group" [(ngModel)]="imageFilter" (change)="applyFilter()" ngDefaultControl>
+                <mat-radio-button class="radio-button" value="none">Aucun filtre</mat-radio-button>
+                <mat-radio-button class="radio-button" value="invert">Invert</mat-radio-button>
+                <mat-radio-button class="radio-button" value="grayscale">grayscale</mat-radio-button>
+                <mat-radio-button class="radio-button" value="saturate">saturate</mat-radio-button>
+                <mat-radio-button class="radio-button" value="opacity">opacity</mat-radio-button>
+                <mat-radio-button class="radio-button" value="drop-shadow">drop-shadow</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div>
+            <button class="imgur-button" mat-raised-button (click)="imgurExportImage()">Téléverser sur imgur</button>
+        </div>
+        <div class="imgur-link" *ngIf="this.isImgurExportSucces">
+            <h3>Voici le lien de l'image sur imgur :</h3>
+            <a class="imgur-button-link" href="{{ this.imageLink.data.link }}" target="_blank" color="white"> {{ this.imageLink.data.link }} </a>
+        </div>
+
+        <form>
+            <mat-form-field>
+                <mat-label>Entrez le titre de l'image </mat-label>
+                <input matInput name="imageTitle" [formControl]="imageTitleForm" />
+            </mat-form-field>
+        </form>
+        <div>
+            <button id="export-button" class="buttons" mat-raised-button (click)="exportImage()" [disabled]="imageTitleForm.value.length === 0">
+                Exporter
+            </button>
+            <button class="buttons" mat-raised-button mat-dialog-close>Annuler</button>
+        </div>
+    </div>
+
+    <div>
+        <a #imageContainer href="" download=""> </a>
+        <canvas id="imageCanvas" #imageCanvas width="250" height="250"></canvas>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+mat-radio-button {
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+}
+mat-label {
+    margin-left: 0.2em;
+    font-weight: bold;
+}

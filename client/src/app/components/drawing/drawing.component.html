@@ -1,0 +1,39 @@
+<div id="canvas-container">
+    <canvas id="canvas" #baseCanvas [attr.width]="width" [attr.height]="height"></canvas>
+    <canvas
+        id="previewLayer"
+        [class.showDashedLine]="resizingPreviewDashedLine"
+        [ngClass]="{ eraserCursor: isEraser() }"
+        #previewCanvas
+        [attr.width]="width"
+        [attr.height]="height"
+        (mousedown)="onMouseDown($event)"
+        (mousemove)="onMouseMove($event)"
+    ></canvas>
+    <canvas
+        id="gridLayer"
+        #gridCanvas
+        [attr.width]="width"
+        [attr.height]="height"
+        (mousedown)="onMouseDown($event)"
+        (mousemove)="onMouseMove($event)"
+    ></canvas>
+</div>
+
+<div class="sizeControllersPositionning">
+    <div
+        class="sizeController"
+        (mousedown)="enableCanvasResizing($event, sizeControllerId.CenterRightSizeController)"
+        [ngStyle]="centerRightSizeControllerPosition()"
+    ></div>
+    <div
+        class="sizeController"
+        (mousedown)="enableCanvasResizing($event, sizeControllerId.CenterBottomSizeController)"
+        [ngStyle]="centerBottomSizeControllerPosition()"
+    ></div>
+    <div
+        class="sizeController"
+        (mousedown)="enableCanvasResizing($event, sizeControllerId.RightBottomSizeController)"
+        [ngStyle]="rightBottomSizeControllerPosition()"
+    ></div>
+</div>

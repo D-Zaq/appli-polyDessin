@@ -1,0 +1,43 @@
+canvas {
+    cursor: crosshair;
+    border: 2px solid #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#canvas {
+    z-index: 0;
+    background-color: white;
+}
+
+#drawCanvas {
+    z-index: 1;
+}
+
+#canvas-container {
+    position: relative;
+}
+
+.showDashedLine {
+    border: none;
+    outline: 2px dashed black;
+}
+
+.sizeController {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background: black;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+.sizeControllersPositionning {
+    position: absolute;
+    z-index: 3;
+}
+
+.no-cursor {
+    cursor: none!important;
+}

@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    background-image: radial-gradient(circle at center center, rgb(43, 41, 41), rgb(8, 8, 8));
+}
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    height: 5em;
+    background-image: linear-gradient(
+            0,
+            rgba(12, 12, 12, 0.51) 0%,
+            rgba(12, 12, 12, 0.51) 12.5%,
+            rgba(25, 25, 25, 0.51) 12.5%,
+            rgba(25, 25, 25, 0.51) 25%,
+            rgba(39, 39, 39, 0.51) 25%,
+            rgba(39, 39, 39, 0.51) 37.5%,
+            rgba(52, 52, 52, 0.51) 37.5%,
+            rgba(52, 52, 52, 0.51) 50%,
+            rgba(66, 66, 66, 0.51) 50%,
+            rgba(66, 66, 66, 0.51) 62.5%,
+            rgba(79, 79, 79, 0.51) 62.5%,
+            rgba(79, 79, 79, 0.51) 75%,
+            rgba(93, 93, 93, 0.51) 75%,
+            rgba(93, 93, 93, 0.51) 87.5%,
+            rgba(106, 106, 106, 0.51) 87.5%,
+            rgba(106, 106, 106, 0.51) 100%
+        ),
+        linear-gradient(
+            226deg,
+            rgb(85, 101, 210) 0%,
+            rgb(85, 101, 210) 12.5%,
+            rgb(73, 116, 214) 12.5%,
+            rgb(73, 116, 214) 25%,
+            rgb(62, 131, 217) 25%,
+            rgb(62, 131, 217) 37.5%,
+            rgb(50, 146, 221) 37.5%,
+            rgb(50, 146, 221) 50%,
+            rgb(38, 162, 225) 50%,
+            rgb(38, 162, 225) 62.5%,
+            rgb(26, 177, 229) 62.5%,
+            rgb(26, 177, 229) 75%,
+            rgb(15, 192, 232) 75%,
+            rgb(15, 192, 232) 87.5%,
+            rgb(3, 207, 236) 87.5%,
+            rgb(3, 207, 236) 100%
+        );
+}
+
+.mat-card {
+    background-image: linear-gradient(
+            0,
+            rgba(12, 12, 12, 0.51) 0%,
+            rgba(12, 12, 12, 0.51) 12.5%,
+            rgba(25, 25, 25, 0.51) 12.5%,
+            rgba(25, 25, 25, 0.51) 25%,
+            rgba(39, 39, 39, 0.51) 25%,
+            rgba(39, 39, 39, 0.51) 37.5%,
+            rgba(52, 52, 52, 0.51) 37.5%,
+            rgba(52, 52, 52, 0.51) 50%,
+            rgba(66, 66, 66, 0.51) 50%,
+            rgba(66, 66, 66, 0.51) 62.5%,
+            rgba(79, 79, 79, 0.51) 62.5%,
+            rgba(79, 79, 79, 0.51) 75%,
+            rgba(93, 93, 93, 0.51) 75%,
+            rgba(93, 93, 93, 0.51) 87.5%,
+            rgba(106, 106, 106, 0.51) 87.5%,
+            rgba(106, 106, 106, 0.51) 100%
+        ),
+        linear-gradient(
+            226deg,
+            rgb(85, 101, 210) 0%,
+            rgb(85, 101, 210) 12.5%,
+            rgb(73, 116, 214) 12.5%,
+            rgb(73, 116, 214) 25%,
+            rgb(62, 131, 217) 25%,
+            rgb(62, 131, 217) 37.5%,
+            rgb(50, 146, 221) 37.5%,
+            rgb(50, 146, 221) 50%,
+            rgb(38, 162, 225) 50%,
+            rgb(38, 162, 225) 62.5%,
+            rgb(26, 177, 229) 62.5%,
+            rgb(26, 177, 229) 75%,
+            rgb(15, 192, 232) 75%,
+            rgb(15, 192, 232) 87.5%,
+            rgb(3, 207, 236) 87.5%,
+            rgb(3, 207, 236) 100%
+        );
+    padding-bottom: 2.5em;
+}
+
+.buttons-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button:hover {
+    background-image: linear-gradient(
+        45deg,
+        rgb(2, 6, 1) 0%,
+        rgb(2, 6, 1) 14.286%,
+        rgb(8, 29, 31) 14.286%,
+        rgb(8, 29, 31) 28.572%,
+        rgb(13, 52, 61) 28.572%,
+        rgb(13, 52, 61) 42.858%,
+        rgb(19, 75, 92) 42.858%,
+        rgb(19, 75, 92) 57.144%,
+        rgb(25, 98, 122) 57.144%,
+        rgb(25, 98, 122) 71.43%,
+        rgb(30, 121, 152) 71.43%,
+        rgb(30, 121, 152) 85.716%,
+        rgb(36, 144, 182) 85.716%,
+        rgb(36, 144, 182) 100.002%
+    );
+}
+
+.button {
+    margin-top: 1.5em;
+    height: 3em;
+    text-align: center;
+    font-size: x-large;
+    color: rgb(241, 241, 241);
+}
+
+.team-name {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.header-item {
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: initial;
+    color: rgb(241, 241, 241);
+}
+
+.footer-item {
+    text-align: center;
+    color: darkgoldenrod;
+}

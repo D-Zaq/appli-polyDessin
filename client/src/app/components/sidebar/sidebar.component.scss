@@ -1,0 +1,77 @@
+.container {
+    width: 330px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+}
+
+.buttons-container {
+    width: 120px;
+    background-image: linear-gradient(90deg, rgb(30, 49, 49), rgb(17, 73, 90));
+    display: grid;
+    align-content: flex-start;
+}
+
+.tools-container {
+    display: grid;
+    grid-template-columns: 55px 55px;
+    justify-content: center;
+    align-content: flex-start;
+    grid-gap: 5px;
+    border-right: solid rgb(116, 230, 224) 3px;
+    width: 100%;
+}
+
+.colors-container {
+    padding-top: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: auto;
+    border-top: 3px solid rgb(100, 217, 233);
+}
+
+.top-border {
+    border-top: 3px solid grey;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.attributes-container {
+    width: 100%;
+
+    border: 5px;
+    background-image: linear-gradient(90deg, rgba(28, 135, 169, 0.7), rgba(23, 148, 148, 0.79));
+}
+
+.icon {
+    width: 30px;
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    color: white;
+    background-color: #f0f8ff;
+    border: 1px solid white;
+}
+
+.selected {
+    background-image: linear-gradient(90deg, rgba(28, 135, 169, 0.7), rgba(23, 148, 148, 0.79));
+}
+
+.notSelected {
+    box-shadow: 0px;
+}
+
+a:hover {
+    color: wheat;
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
