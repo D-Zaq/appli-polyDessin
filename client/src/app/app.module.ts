@@ -20,6 +20,7 @@ import { SaveDrawingDialogComponent } from './components/sidebar/save-drawing-di
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ZoomCanvasComponent } from './components/zoom-canvas/zoom-canvas.component';
 import { MaterialModule } from './material.module';
+import { ThreeJSHomeComponent } from './three-js-home/three-js-home.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -36,6 +37,7 @@ import { MaterialModule } from './material.module';
         ConfirmationDialogComponent,
         GridComponent,
         MagnetismComponent,
+        ThreeJSHomeComponent,
     ],
     imports: [BrowserModule, HttpClientModule, AppRoutingModule, BrowserAnimationsModule, MaterialModule, ColorModule, NgImageSliderModule],
     providers: [],

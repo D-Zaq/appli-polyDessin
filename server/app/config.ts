@@ -1,7 +1,7 @@
 const configDB = {
-    userName: 'kibidango',
-    password: 'MinamotoSukehiro1$',
-    host: 'cluster0.z0xyw.mongodb.net',
+    userName: 'Zakaria2396',
+    password: 'dbAdminUser2396Passw0rd',
+    host: 'cluster0.iqokk.mongodb.net',
     name: 'drawingDatabase',
 };
 
