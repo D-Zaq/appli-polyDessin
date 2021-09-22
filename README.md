@@ -1,6 +1,6 @@
-# LOG2990
+# POLYDESSIN 2
 
-Projet de base à utiliser pour démarrer le développement de votre application.
+application web de dessin en utilisant HTML Canvas et les langages Typescript, CSS et HTML à l’aide du cadriciel Angular pour le frontend, Express.js (Javascript avec Node.js) pour le backend et la base de données avec MongoDB
 
 # Important
 
